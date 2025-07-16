@@ -1,4 +1,3 @@
-// File: /pages/Home.tsx
 import Header from '../components/Header';
 import Projects from '../components/Projects';
 
