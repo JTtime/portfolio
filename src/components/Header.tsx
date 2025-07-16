@@ -4,6 +4,8 @@ import { Typography, Button, useTheme } from '@mui/material';
 
 export default function Header() {
   const theme = useTheme();
+  const element = document.getElementById('projects');
+  const top = element?.offsetTop;
   return (
     <Parallax bgImage="https://source.unsplash.com/1600x900/?ai,technology" strength={300}>
       <div style={{ height: '100vh', color: theme.palette.text.primary, display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center' }}>
@@ -16,7 +18,7 @@ export default function Header() {
           MERN Engineer • AI Agent Builder • Frontend Storyteller
         </Typography>
         <Button variant="contained" color="secondary" sx={{ mt:4 }} component={motion.div}
-                whileHover={{ scale:1.05 }} onClick={() => scrollTo('#projects')}>
+                whileHover={{ scale:1.05 }} onClick={() => window.scrollTo({ top, behavior: 'smooth' })}>
           See My Work
         </Button>
       </div>

@@ -7,19 +7,19 @@ const projects = [
     title: "Agentic AI UI Platform",
     description: "Frontend for orchestrating autonomous AI agents. Built using React + Material UI. Handles agent workflows, logs, and UI orchestration.",
     stack: ["React", "MUI", "Python", "LLMs"],
-    github: "https://github.com/JTtime/agentic-ui", // Replace or comment if needed
+    github: "https://github.com/JTtime/practice/tree/main/agent-demo",
   },
   {
     title: "EduFund Onboarding System",
     description: "Web + Mobile experience for student onboarding. Managed full stack in solo mode including dashboard, auth, and API integration.",
     stack: ["React", "Next.js", "React Native", "Node.js"],
-    github: "https://github.com/JTtime/edufund-app", // Replace or comment if needed
+    github: "https://github.com/JTtime/edufund-app",
   },
   {
     title: "3D Product Viewer",
     description: "Custom React + Three.js 3D viewer with Firebase integration. Allows real-time editing and sharing of 3D models.",
     stack: ["React", "Three.js", "Firebase"],
-    github: "https://github.com/JTtime/3d-viewer", // Replace or comment if needed
+    github: "https://github.com/JTtime/Product_3D",
   },
   {
     title: "XFlix - Video Platform",
