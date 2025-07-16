@@ -8,7 +8,7 @@ export default function Contact() {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const data = new FormData(form);
-    const subject = encodeURIComponent("Portfolio Contact from YC Founder");
+    const subject = encodeURIComponent("Portfolio Contact from Hiring Manager");
     const body = encodeURIComponent(
       `Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\nMessage:\n${data.get('message')}`
     );
