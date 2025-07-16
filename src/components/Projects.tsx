@@ -50,13 +50,14 @@ const projects = [
         description: "Enterprise app built for a client. I led the front-end experience and UI orchestration using React + Redux. Video demo available.",
         stack: ["React", "Redux", "Recoil", "Python"],
         demo: "https://www.findability.ai/en/agentic-ai-platform",
-        image: "/screenshots/patentdrafting.png"
+        image: "/screenshots/patentdrafting.png",
     },
     {
         title: "Product Visualization UI",
         description: "A frontend visualizer I built for a manufacturing client. Screenshots available — fully designed and developed solo.",
         stack: ["React", "Three.js", "Figma"],
         image: "/screenshots/product3d.png",
+    }
 ];
 
 
