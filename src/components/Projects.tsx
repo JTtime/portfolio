@@ -38,11 +38,11 @@ const projects = [
     },
     {
         title: "EduFund Web & Mobile App",
-        description: "I contributed to the core frontend and mobile onboarding workflows. Built using React Native, Next.JS, and custom design system.",
+        description: "I contributed to the core frontend web-app and mobile-app onboarding workflows. Built using React Native, Next.JS, and custom design system.",
         stack: ["React", "React Native", "Next.js"],
         live: "https://app.edufund.in/",
         playstore: "https://educationfund.app.link/edufundapp",
-        appstore: "https://educationfund.app.link/edufundapp", 
+        appstore: "https://educationfund.app.link/edufundapp",
         image: "/screenshots/edufund.png"
     },
     {
@@ -53,10 +53,12 @@ const projects = [
         image: "/screenshots/patentdrafting.png",
     },
     {
-        title: "Product Visualization UI",
+        title: "3D T-shirt Designer",
         description: "A frontend visualizer I built for a manufacturing client. Screenshots available — fully designed and developed solo.",
-        stack: ["React", "Three.js", "Figma"],
+        stack: ["React", "Three.js", "Firebase", "Open Source"],
         image: "/screenshots/product3d.png",
+        live: "https://product-3-d.vercel.app/",
+        github: "https://github.com/JTtime/Product_3D"
     }
 ];
 
@@ -67,6 +69,7 @@ export default function Projects() {
             <Typography variant="h4" sx={{ mb: 5 }} component={motion.div} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6 }}>
                 🚀 Featured Projects
             </Typography>
+            {/* <Grid size={{ xs: 12, md: 6 }} key={project.title}></Grid> */}
             <Grid container spacing={4}>
                 {projects.map((project, idx) => (
                     <Grid size={{ xs: 12, md: 6 }} key={project.title}>
@@ -74,9 +77,10 @@ export default function Projects() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: idx * 0.2 }}
+                            style={{ height: '100%' }}
                         >
-                            <Card elevation={6}>
-                                <CardContent>
+                            <Card elevation={6} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                                <CardContent sx={{ flexGrow: 1 }}>
                                     <Typography variant="h6" sx={{ mb: 1 }}>{project.title}</Typography>
                                     <Typography variant="body2" sx={{ mb: 2 }}>{project.description}</Typography>
                                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
@@ -85,7 +89,28 @@ export default function Projects() {
                                         ))}
                                     </Box>
                                 </CardContent>
-                                <CardActions>
+
+                                {project.image ? (
+                                    <Box sx={{ p: 1 }}>
+                                        <Box
+                                            component="img"
+                                            src={project.image}
+                                            alt={project.title}
+                                            sx={{
+                                                width: '100%',
+                                                height: 440,
+                                                objectFit: 'cover',
+                                                borderRadius: 2,
+                                            }}
+                                        />
+                                    </Box>
+                                ) : (
+                                    <Box sx={{ p: 1, height: 180, display: 'flex', alignItems: 'center', justifyContent: 'center', bgcolor: '#f5f5f5', borderRadius: 2 }}>
+                                        <Typography variant="body2" color="textSecondary">No preview available</Typography>
+                                    </Box>
+                                )}
+
+                                <CardActions sx={{ p: 2 }}>
                                     {project.github && (
                                         <Button size="small" href={project.github} target="_blank" startIcon={<GitHubIcon />}>
                                             View Code
@@ -112,21 +137,12 @@ export default function Projects() {
                                         </Button>
                                     )}
                                 </CardActions>
-                                {project.image && (
-                                    <Box sx={{ p: 1 }}>
-                                        <img
-                                            src={project.image}
-                                            alt={project.title}
-                                            style={{ maxWidth: '100%', borderRadius: 8 }}
-                                        />
-                                    </Box>
-                                )}
-
                             </Card>
                         </motion.div>
                     </Grid>
                 ))}
             </Grid>
+
         </Box>
     );
 }
