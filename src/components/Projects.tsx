@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { Description } from "@mui/icons-material";
 
 // const projects = [
 //   {
@@ -75,6 +76,14 @@ const projects = [
     live: "https://about.vridhee.com/",
   },
   {
+    title: "Crio Portfolio",
+    description: "Completed fellowship program in software development with MERN stack in record timing",
+    stack: ["React", "NodeJS", "MongoDB", "vanilla JS"],
+    isPersonal: true,
+    live: "https://www.crio.do/learn/portfolio/jeevraj-vjti/"
+
+  },
+  {
     title: "Agentic AI UI Platform",
     description:
       "Demo for orchestrating AI agents through prompt engineering. Built using Node.JS.",
@@ -116,6 +125,7 @@ export default function Projects() {
                 }}
               >
                 <CardContent sx={{ flexGrow: 1 }}>
+                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
                   <Typography variant="h6" sx={{ mb: 1 }}>
                     {project.title}
                   </Typography>
@@ -126,6 +136,7 @@ export default function Projects() {
                       color="default"
                     />
                   )}
+                  </Box>
                   <Typography variant="body2" sx={{ mb: 2 }}>
                     {project.description}
                   </Typography>
