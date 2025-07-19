@@ -66,7 +66,7 @@ const projects = [
 
     },
     {
-        title: "Agentic AI UI Platform",
+        title: "Agentic AI",
         description:
             "Demo for orchestrating AI agents through prompt engineering. Built using Node.JS.",
         stack: ["React", "MUI", "Python", "LLMs"],
