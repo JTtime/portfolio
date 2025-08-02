@@ -68,9 +68,9 @@ const projects = [
     {
         title: "Agentic AI",
         description:
-            "Demo for orchestrating AI agents through prompt engineering. Built using Node.JS.",
-        stack: ["React", "MUI", "Python", "LLMs"],
-        github: "https://github.com/JTtime/practice/tree/main/agent-demo",
+            "Demo for orchestrating AI agents through prompt engineering. Built using Python backend and React frontend with streaming response",
+        stack: ["React", "MUI", "Python", "LLMs", "openAI"],
+        github: "https://github.com/JTtime/openAI-tool-calling",
         isPersonal: true,
         image: "/screenshots/ai.jpg",
         type: "Personal"
